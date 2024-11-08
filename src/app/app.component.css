@@ -1,0 +1,13 @@
+.app-container {
+    display: flex; /* Use flexbox for layout */
+  }
+  
+  .content {
+    flex: 1; /* Allow content area to grow */
+    margin-left: 20%; /* Leave space for the sidebar */
+    padding: 20px; /* Add some padding */
+    height: 100vh; /* Full height to match sidebar */
+    overflow-y: none; /* Scroll if content exceeds viewport height */
+  }
+  
+  

@@ -1,0 +1,113 @@
+<!-- 
+<form [formGroup]="postForm" (ngSubmit)="onSubmit()" class="post-form">
+    <div class="form-group">
+      <label for="title">Post Title</label>
+      <input type="text" id="title" class="form-control" formControlName="title">
+      <div *ngIf="postForm.get('title')?.invalid && postForm.get('title')?.touched" class="text-danger">
+        Title is required.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="content">Post Content</label>
+      <div class="editor-toolbar">
+        <button type="button" (click)="makeBold()" class="btn btn-secondary">B</button>
+        <button type="button" (click)="makeItalic()" class="btn btn-secondary">I</button>
+        <button type="button" (click)="makeUnderline()" class="btn btn-secondary">U</button>
+        <input type="file" (change)="onFileChange($event)" class="ml-2">
+        <button type="button" (click)="addLink()" class="btn btn-secondary">Add Link</button>
+      </div>
+      <div contenteditable="true" id="editor" class="form-control" rows="10" (input)="postForm.patchValue({ content: editor.innerHTML })"></div>
+      <div *ngIf="postForm.get('content')?.invalid && postForm.get('content')?.touched" class="text-danger">
+        Content is required.
+      </div>
+    </div>
+  
+    <div *ngIf="showLinkForm" class="link-form">
+      <h5>Add a Link</h5>
+      <div class="form-group">
+        <label for="linkText">Link Text</label>
+        <input type="text" id="linkText" class="form-control" [(ngModel)]="linkText">
+      </div>
+      <div class="form-group">
+        <label for="linkUrl">Link URL</label>
+        <input type="text" id="linkUrl" class="form-control" [(ngModel)]="linkUrl">
+      </div>
+      <button type="button" (click)="insertLink()" class="btn btn-primary">Insert Link</button>
+    </div>
+  
+    <button type="submit" class="btn btn-success mt-3" [disabled]="postForm.invalid">Submit Post</button>
+  </form>
+   -->
+   <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+    <div class="dropdown-container">
+      <label for="dropdown1" style="color: gray;">Tags:</label>
+      <div class="dropdown">
+        <input type="text" id="dropdown1" formControlName="levelSelected" (focus)="showOptions('options1')" (mousedown)="$event.stopPropagation()" style=" border: none; border-bottom: 0.5px solid black;" />
+        <div *ngIf="options1Visible" class="options" >
+          <div *ngFor="let tag of tags" (click)="selectOption(tag.name, 'selectedDropdown1','levelSelected')" [class.highlighted]="selectedDropdown1 === tag.name">
+           <div class="show" style="height: fit-content; padding: 0%; margin: 0%;">
+            {{ tag.name }}
+            <div class="detail" style="height: fit-content; padding: 0%; margin: 0%; color: gray;">
+              {{ tag.detail }}
+            </div>
+           </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="title">Post Title</label>
+      <input type="text" id="title" class="form-control" formControlName="title" required>
+      <span class="error-msg" style="color: red;" *ngIf="postForm.get('title')?.invalid && postForm.get('title')?.touched">
+        Title Required.
+      </span>
+    </div>
+    <div   [froalaEditor]  [(froalaModel)]="editorContent" ></div>
+    <div class="content" role="main">
+
+      <div  [froalaEditor]="options"  formControlName="content"></div>
+    
+    </div>
+    <!-- <div id="editor">Hello, Froala!</div> -->
+
+    <div class="toolbar">      
+      <button type="button" (click)="addLinkerFn()">Add Link</button>
+    </div>   
+    <div class="form-group">
+      <div class="linkentered">
+        <a [href]="linkForm.get('link')?.value" target="_blank">{{ linkForm.get('name')?.value }}</a>
+      </div>
+    </div> 
+    <button type="submit" class="btn btn-primary" [disabled]="postForm.invalid">Submit</button>
+  </form>
+
+  <div class="popUp" *ngIf="addLinker">
+     <form [formGroup]="linkForm" (ngSubmit)="onSubmitLink()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" formControlName="name" class="form-control" placeholder="Enter name">
+    </div>
+    <div class="form-group">
+      <label for="link">Link</label>
+      <input id="link" formControlName="link" class="form-control" placeholder="Enter link">
+    </div> 
+    <button mat-button type="submit" [disabled]="linkForm.invalid" (click)="addLinkerFn()">Submit</button>
+     </form>
+    </div>
+  <!--
+      <mat-form-field>
+        <mat-label>Display Name</mat-label>
+        <input matInput formControlName="displayName" required [(ngModel)]="Name">
+      </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>Link</mat-label>
+        <input matInput formControlName="link" required [(ngModel)]="Link">
+      </mat-form-field>
+    
+      <div mat-dialog-actions>
+      <button mat-button type="button" (click)="onCancel()">Cancel</button> 
+        <button mat-button type="submit" [disabled]="linkForm.invalid">Submit</button>
+      </div>
+    </form> -->

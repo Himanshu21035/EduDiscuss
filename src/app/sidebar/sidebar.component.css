@@ -1,0 +1,44 @@
+.sidebar {
+    width: 20%;
+    background-color: #f8f9fa; /* Light background */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixes the sidebar in place */
+    /* top: 0; Aligns to the top */
+    left: 0; /* Aligns to the left */
+    overflow-y: auto; /* Allows scrolling if content exceeds viewport height */
+  }
+  
+  
+  .user-profile {
+    margin-bottom: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav-link {
+    padding: 10px 0;
+    text-decoration: none;
+    color: black; /* Bootstrap primary color */
+    transition: color 0.2s;
+  }
+  
+  .nav-link:hover {
+    color: #0056b3; /* Darker shade on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      position: relative; /* Make it relative on small screens */
+      height: auto; /* Allow it to fit content */
+      width: 100%; /* Take full width */
+    }
+  
+    .content {
+      margin-left: 0; /* Reset margin */
+    }
+  }

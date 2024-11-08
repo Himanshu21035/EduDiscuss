@@ -1,0 +1,252 @@
+.contain{
+    /* height: 100vh; */
+    /* display: flexbox; */
+    justify-content: center;
+    align-items: center;
+}
+.back{
+    background-color: yellow;
+}
+.row1{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    /* padding-bottom: 20px;
+    padding-top: 10px;
+    margin: 20px 0px; */
+    perspective: 1000px;
+    /* background-color: #00aeef; */
+    
+}
+ 
+
+
+.row2{
+    display: flex;
+    justify-content: space-around;
+    /* margin: 20px 0px; */
+}
+.card{
+    width: 33.33%;
+    height: 25vh;
+    /* background-color: #00aeef; */
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover{
+    transform: scale(1.01);
+}
+@media screen and (max-width: 992px){
+    .card{
+        width: 100%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        
+    }
+    .row1{
+        display: block;
+
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Opaque background */
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    position: relative;
+    max-height: 90vh;
+    width: 90vw;
+    overflow-y: scroll;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  button {
+    width: 10%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  select:hover{
+    cursor: text;
+  }
+
+
+  .dropdown-container {
+    margin-bottom: 15px;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .options {
+    position: absolute;
+    top: 0; /* Position below the input */
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px; /* Limit height */
+    overflow-y: auto; /* Enable scrolling */
+    z-index: 100;
+    box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.2);
+    /* box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.2); */
+    transition: background-color 0.3s;
+  }
+  
+  .options div {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .options div:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+  }
+  
+  .highlighted {
+    background-color: #d0e6f0; /* Highlighted option */
+  }
+
+  .toggle {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    /* margin-bottom: 20px; */
+}
+
+.toggle input {
+    display: none; /* Hide default checkbox */
+}
+
+.slider {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    width: 26px;
+    height: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #4CAF50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.form-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Transition for opacity */
+    height: 0; /* Start with no height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.fade-in {
+    opacity: 1; /* Fully visible */
+    height: auto; /* Allow height */
+}
+
+.fade-out {
+    opacity: 0; /* Fully hidden */
+    height: 0; /* No height */
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.show{
+  display: flex;
+  justify-content: space-between;
+}
+.AdvOption:hover{
+  cursor: pointer;
+}
+.AdvOption{
+  display: flex;
+  justify-content: space-between;
+}
+.nested{
+  box-shadow: 5px 5px 5px 2px rgba(0,0,0,0.2);
+  border: 0.5px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+}

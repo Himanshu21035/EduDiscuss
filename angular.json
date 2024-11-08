@@ -37,14 +37,16 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/rose-red.css",
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/froala-editor/css/froala_editor.pkgd.min.css"
+              
             ],
-            "scripts": [],
-            "server": "src/main.server.ts",
-            "prerender": true,
-            "ssr": {
-              "entry": "server.ts"
-            }
+            "scripts": [
+              "node_modules/froala-editor/js/froala_editor.pkgd.min.js"
+
+            ]
           },
           "configurations": {
             "production": {
@@ -100,12 +102,22 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "@angular/material/prebuilt-themes/rose-red.css",
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/froala-editor/css/froala_editor.pkgd.min.css"
+            
             ],
-            "scripts": []
+            "scripts": [
+            
+
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "a2883188-2fe5-4b07-9a42-d37bbc872110"
   }
 }

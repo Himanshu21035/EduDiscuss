@@ -1,0 +1,22 @@
+.post-form {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .editor-toolbar {
+    margin-bottom: 10px;
+  }
+  
+  #editor {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 150px;
+  }
+  
+  .link-form {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  }
+  
