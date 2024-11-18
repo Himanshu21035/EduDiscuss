@@ -2,13 +2,15 @@
     <div class="user-profile">
       <h3>User Profile</h3>
       <!-- You can display user information here -->
-      <p>{{ username }}</p>
+      <p>{{ firstName }}</p>
     </div>
     <div class="nav-links">
       <a routerLink="/create" class="nav-link">Start Discussion</a>
       <a routerLink="/tags" class="nav-link">Tags</a>
+      <a routerLink="/question" class="nav-link">Questions</a>
       <a routerLink="/contact" class="nav-link">Contact Us</a>
-      <a (click)="logout()" class="nav-link">Logout</a>
+      <a *ngIf="user" (click)="logout()" class="nav-link">Logout</a>
+      <a *ngIf="!user" (click)="login()" class="nav-link">Login</a>
       <a routerLink="/rules" class="nav-link">Rules</a>
     </div>
   </div>

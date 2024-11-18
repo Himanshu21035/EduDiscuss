@@ -1,0 +1,40 @@
+<!-- questions.component.html -->
+<div class="container">
+    <h2 class="text-center my-4">Questions</h2>
+  
+    <!-- Display list of questions -->
+    <div *ngFor="let question of questions">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ question.title }}</h5>
+            <div [innerHTML]="question.content"></div>
+      
+            <!-- Display tags, if available -->
+            <div *ngIf="question.tags?.length > 0">
+              <p><strong>Tags:</strong> {{ question.tags.join(', ') }}</p>
+            </div>
+      
+            <p><strong>Posted by:</strong> {{ question.firstName }} {{ question.lastName }}</p>
+            <p><strong>Level:</strong> {{ question.levelSelected }}</p>
+      
+            <button (click)="viewAnswers(question.id)" class="btn btn-info">View Answers</button> <!-- Action to view answers -->
+          </div>
+        </div>
+      </div>
+      <div *ngIf="selectedQuestionId">
+        <h3>Answers for this question:</h3>
+    
+        <!-- Display the list of answers for the selected question -->
+        <div *ngFor="let answer of answers" class="card mb-2">
+          <div class="card-body">
+            <p><strong>{{ answer.firstName }} {{ answer.lastName }}</strong> says:</p>
+            <p [innerHTML]="answer.content"></p>
+            <p class="text-muted">Posted on: {{ answer.createdAt.toDate() | date }}</p>
+          </div>
+        </div>
+    
+        <!-- Show the AnswerComponent to submit a new answer -->
+        <app-answer [questionId]="selectedQuestionId"></app-answer>
+      </div>
+  </div>
+  

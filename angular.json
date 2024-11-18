@@ -31,11 +31,18 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+                  "src/favicon.ico",
+                  "src/assets",
+                {
+                   "glob": "**/*",
+                   "input": "public"
+                },
+                 {
+                    "glob": "**/*.css",
+                    "input": "node_modules/froala-editor/css",
+                    "output": "/assets/froala/"
+                }
+              ],
             "styles": [
               "@angular/material/prebuilt-themes/rose-red.css",
               "src/styles.css",
@@ -44,8 +51,6 @@
               
             ],
             "scripts": [
-              "node_modules/froala-editor/js/froala_editor.pkgd.min.js"
-
             ]
           },
           "configurations": {

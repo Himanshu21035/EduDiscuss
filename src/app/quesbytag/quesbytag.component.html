@@ -1,0 +1,14 @@
+<div *ngIf="questions.length > 0; else noQuestions">
+    <div *ngFor="let question of questions" class="question-card">
+      <div class="card-body">
+        <h5 class="card-title">{{ question.title }}</h5>
+        <div [innerHTML]="question.content"></div>
+        <button (click)="viewAnswers(question.id)" class="btn btn-info">View Answers</button>
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noQuestions>
+    <p>No questions found for this tag.</p>
+  </ng-template>
+  

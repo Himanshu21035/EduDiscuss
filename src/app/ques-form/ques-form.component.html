@@ -63,26 +63,15 @@
         Title Required.
       </span>
     </div>
-    <div   [froalaEditor]  [(froalaModel)]="editorContent" ></div>
-    <div class="content" role="main">
-
-      <div  [froalaEditor]="options"  formControlName="content"></div>
     
-    </div>
-    <!-- <div id="editor">Hello, Froala!</div> -->
-
-    <div class="toolbar">      
-      <button type="button" (click)="addLinkerFn()">Add Link</button>
-    </div>   
-    <div class="form-group">
-      <div class="linkentered">
-        <a [href]="linkForm.get('link')?.value" target="_blank">{{ linkForm.get('name')?.value }}</a>
-      </div>
-    </div> 
+    <div class="content" role="main">
+    <div id="edit" formControlName="content"></div>
+  </div>
+  
     <button type="submit" class="btn btn-primary" [disabled]="postForm.invalid">Submit</button>
   </form>
 
-  <div class="popUp" *ngIf="addLinker">
+  <!-- <div class="popUp" *ngIf="addLinker">
      <form [formGroup]="linkForm" (ngSubmit)="onSubmitLink()">
     <div class="form-group">
       <label for="name">Name</label>
@@ -94,7 +83,23 @@
     </div> 
     <button mat-button type="submit" [disabled]="linkForm.invalid" (click)="addLinkerFn()">Submit</button>
      </form>
-    </div>
+    </div> -->
+
+      <!-- <div class="content" role="main">
+
+      <div  [froalaEditor]="options"  formControlName="content"></div>
+    
+    </div> -->
+    <!-- <div id="editor">Hello, Froala!</div> -->
+
+    <!-- <div class="toolbar">      
+      <button type="button" (click)="addLinkerFn()">Add Link</button>
+    </div>   
+    <div class="form-group">
+      <div class="linkentered">
+        <a [href]="linkForm.get('link')?.value" target="_blank">{{ linkForm.get('name')?.value }}</a>
+      </div>
+    </div>  -->
   <!--
       <mat-form-field>
         <mat-label>Display Name</mat-label>

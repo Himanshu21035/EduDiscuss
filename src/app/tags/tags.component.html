@@ -1,98 +1,90 @@
 <div class="container1">
-    <div class="contain" style="padding: 20px; background-color: coral;">
-        <div class="row1">
-          <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;">
-            <div class="frnt">
-              <h3 style=" font-family: 'roboto'; color: #333;"><i class="fa fa-gift" aria-hidden="true"></i>
-                Give-Aways</h3>
-            </div>
-            <div class="back" style="padding: 10px;">
-              <p style="font-family: 'Arial', sans-serif; color: #555;">All the giveaways like promo coupons, serial keys, product keys etc.</p>
-            </div>
-          </div>
-      
-          <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;">
-            <div class="frnt">
-              
-              <h3 style=" font-family: 'roboto'; color: #333;"><i class="bi bi-journal"></i> Tutorials and Methods</h3>
-            </div>
-            <div class="back" style="padding: 10px;">
-              <p style="font-family: 'Arial', sans-serif; color: #555;">All the usefull tutorials, guides and methods, etc.</p>
-            </div>
-          </div>
-      
-          <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;">
-            <div class="frnt">
-             
-              <h3 style=" font-family: 'roboto'; color: #333;"><i class="bi bi-book-fill"></i> Courses Link</h3>
-            </div>
-            <div class="back" style="padding: 10px;">
-              <p style="font-family: 'Arial', sans-serif; color: #555;">You can Post or Find all about the free courses in this section.</p>
-            </div>
-          </div>
+  <div class="contain" style="padding: 20px; background-color: #2e7d32;">
+    <div class="row1">
+      <div (click)="onTagClick('Give-Away')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="fa fa-gift" aria-hidden="true"></i> Give-Aways</h4>
         </div>
-      
-        <div class="row1">
-          <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;" >
-            <div class="frnt">
-              
-              <h3 style=" font-family: 'roboto'; color: #333;"><i class="bi bi-chat-fill"></i> Request</h3>
-            </div>
-            <div class="back" style="padding: 10px;">
-              <p style="font-family: 'Arial', sans-serif; color: #555;">Request anything to the community.</p>
-            </div>
-          </div>
-      
-          <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;" >
-            <div class="frnt">
-              
-              <h3 style=" font-family: 'roboto'; color: #333;"><i class="bi bi-joystick"></i> Games</h3>
-            </div>
-            <div class="back" style="padding: 10px;">
-              <p style="font-family: 'Arial', sans-serif; color: #555;">In this tag, all games would be posted. </p>
-            </div>
-          </div>
-      
-          <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;" >
-            <div class="frnt">
-              
-              <h3 style="font-family: 'Garamond', serif; color: #333;"><i class="bi bi-newspaper"></i> News </h3>
-            </div>
-            <div class="back" style="padding: 10px;">
-              <p style="font-family: 'Arial', sans-serif; color: #555;">Here articles related to current affairs can be posted. </p>
-            </div>
-          </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">All the giveaways like promo coupons, serial keys, product keys, etc.</p>
         </div>
-        <div class="row1">
-            <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;">
-              <div class="frnt">
-               
-                <h3 style=" font-family: 'roboto'; color: #333;"><i class="bi bi-key-fill"></i> Software</h3>
-              </div>
-              <div class="back" style="padding: 10px;">
-                <p style="font-family: 'Arial', sans-serif; color: #555;">All softwares, plugins and themes can be posted here.</p>
-              </div>
-            </div>
-        
-            <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;">
-              <div class="frnt">
-                
-                <h3 style=" font-family: 'roboto'; color: #333;"><i class="bi bi-feather"></i> Resources</h3>
-              </div>
-              <div class="back" style="padding: 10px;">
-                <p style="font-family: 'Arial', sans-serif; color: #555;">Resources which do not fit in other tags</p>
-              </div>
-            </div>
-        
-            <div class="card" style="border: 1px solid #ccc; border-radius: 8px; overflow: hidden;  background-color: #ffffff;">
-              <div class="frnt">
-               
-                <h3 style=" font-family: 'roboto'; color: #333;"><i class="bi bi-envelope-paper"></i> Forum Updates and Rules</h3>
-              </div>
-              <div class="back" style="padding: 10px;">
-                <p style="font-family: 'Arial', sans-serif; color: #555;">To maintain the decorum of forum.</p>
-              </div>
-            </div>
-          </div>
       </div>
+
+      <div (click)="onTagClick('Tutorials and Method')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="bi bi-journal"></i> Tutorials and Methods</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">All the useful tutorials, guides, and methods, etc.</p>
+        </div>
+      </div>
+
+      <div (click)="onTagClick('Courses Link')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="bi bi-book-fill"></i> Courses Link</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">You can Post or Find all about the free courses in this section.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row1">
+      <div (click)="onTagClick('Request')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="bi bi-chat-fill"></i> Request</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">Request anything from the community.</p>
+        </div>
+      </div>
+
+      <div (click)="onTagClick('Games')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="bi bi-joystick"></i> Games</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">In this tag, all games would be posted.</p>
+        </div>
+      </div>
+
+      <div (click)="onTagClick('News')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'Garamond', serif; color: #2e7d32;"><i class="bi bi-newspaper"></i> News</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">Here, articles related to current affairs can be posted.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row1">
+      <div (click)="onTagClick('Software')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="bi bi-key-fill"></i> Software</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">All software, plugins, and themes can be posted here.</p>
+        </div>
+      </div>
+
+      <div (click)="onTagClick('Resources')" class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="bi bi-feather"></i> Resources</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">Resources that do not fit in other tags</p>
+        </div>
+      </div>
+
+      <div class="card" style="border: 1px solid #004d40; border-radius: 8px; overflow: hidden; background-color: #ffffff;">
+        <div class="frnt">
+          <h4 style="font-family: 'roboto'; color: #2e7d32;"><i class="bi bi-envelope-paper"></i> Forum Updates and Rules</h4>
+        </div>
+        <div class="back" style="padding: 10px;">
+          <p style="font-family: 'Arial', sans-serif; color: #004d40;">To maintain the decorum of the forum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

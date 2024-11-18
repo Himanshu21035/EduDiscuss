@@ -1,0 +1,76 @@
+/* Main container for answer form */
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  /* Header styling */
+  .container h3 {
+    color: #2e7d32; /* Dark green */
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Label styling */
+  .form-group label {
+    font-weight: bold;
+    color: #4a4a4a;
+  }
+  
+  /* Textarea styling */
+  textarea.form-control {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1rem;
+    resize: vertical;
+    outline: none;
+  }
+  
+  textarea.form-control:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.2);
+  }
+  
+  /* Validation message styling */
+  .text-danger {
+    font-size: 0.9rem;
+    color: #d9534f;
+    margin-top: 5px;
+  }
+  
+  /* Submit button styling */
+  .btn-primary {
+    background-color: #2e7d32; /* Dark green */
+    border-color: #2e7d32;
+    color: #fff;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #276727; /* Slightly darker green on hover */
+    border-color: #276727;
+  }
+  
+  .btn-primary:disabled {
+    background-color: #ccc;
+    border-color: #ccc;
+    cursor: not-allowed;
+  }
+  

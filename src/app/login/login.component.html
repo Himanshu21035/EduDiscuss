@@ -1,0 +1,36 @@
+<!-- src/app/login/login.component.html -->
+ <body>
+<div class="modal">
+    
+    <div class="modal-content">
+        <div class="close" (click)="closeModal()">&times;</div>
+    <h2>Login</h2>
+    <form (ngSubmit)="onLogin()">
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required />
+      </div>
+  
+      <div class="input-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required />
+      </div>
+  
+      <button type="submit">Login</button>
+    </form>
+  
+    <div class="row mt-3">
+        <div class="col-6">
+            <a routerLink="/signup" class="text-decoration-none">Need an Account? <span class="text-danger">Register</span></a>
+        </div>
+        <div class="col-6 text-end">
+            <a routerLink="/forget-password" class="text-dark text-decoration-none">Forgot Password?</a>
+        </div>
+    </div>
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+</div>
+<!-- </div> -->
+</body>

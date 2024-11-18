@@ -1,35 +1,54 @@
+/* Sidebar container */
 .sidebar {
-    width: 20%;
-    background-color: #f8f9fa; /* Light background */
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    height: 100vh; /* Full height */
-    position: fixed; /* Fixes the sidebar in place */
-    /* top: 0; Aligns to the top */
-    left: 0; /* Aligns to the left */
-    overflow-y: auto; /* Allows scrolling if content exceeds viewport height */
-  }
-  
-  
-  .user-profile {
-    margin-bottom: 20px;
-  }
-  
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .nav-link {
-    padding: 10px 0;
-    text-decoration: none;
-    color: black; /* Bootstrap primary color */
-    transition: color 0.2s;
-  }
-  
-  .nav-link:hover {
-    color: #0056b3; /* Darker shade on hover */
-  }
+  position: fixed;
+  top: 0px; /* Adjust this value to match your header height */
+  left: 0;
+  width: 250px;
+  height: calc(100vh); /* Full height minus header height */
+  background-color: #2e7d32; /* Dark green background */
+  color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Scroll if sidebar content overflows */
+}
+
+/* User Profile Section */
+.user-profile {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-profile h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* Sidebar navigation links */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 15px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+  border-radius: 4px;
+}
+
+.nav-link:hover {
+  background-color: #1b5e20; /* Darker green for hover effect */
+}
+
+/* Ensure content to the right of the sidebar doesn't overlap */
+body {
+  margin-left: 250px; /* Offset main content by the sidebar width */
+}
+
   
   @media (max-width: 768px) {
     .sidebar {

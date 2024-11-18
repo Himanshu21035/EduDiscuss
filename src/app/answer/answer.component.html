@@ -1,0 +1,15 @@
+<div class="container mt-4">
+    <h3>Post an Answer</h3>
+    <form [formGroup]="answerForm" (ngSubmit)="submitAnswer()">
+      <div class="form-group">
+        <label for="content">Answer:</label>
+        <textarea id="content" formControlName="content" class="form-control" rows="4" placeholder="Write your answer here"></textarea>
+        <div *ngIf="answerForm.get('content')?.invalid && answerForm.get('content')?.touched" class="text-danger">
+          Answer content is required.
+        </div>
+      </div>
+  
+      <button type="submit" [disabled]="answerForm.invalid" class="btn btn-primary mt-2">Submit Answer</button>
+    </form>
+  </div>
+  

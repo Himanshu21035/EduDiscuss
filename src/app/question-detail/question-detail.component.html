@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>{{ question.title }}</h2>
+    <p [innerHTML]="question.content"></p>  <!-- Use [innerHTML] to render HTML tags in the content -->
+  
+    <h3>Answers:</h3>
+    <div *ngFor="let answer of answers" class="card mb-3">
+      <div class="card-body">
+        <p><strong>{{ answer.username }}</strong></p>
+        <p [innerHTML]="answer.content"></p>  
+        <p class="text-muted">Posted on: {{ answer.createdAt.toDate() | date }}</p>
+        <button class="btn btn-outline-primary" (click)="onLikeClick(answer.id)" >
+            <i class="fa fa-thumbs-up"></i> Like ({{ answer.likes }})
+          </button>
+      </div>
+    </div>
+  </div>
+  <div class="ans">
+    <app-answer [questionId]="selectedQuestionId"></app-answer>
+  </div>
+  
+  

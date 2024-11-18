@@ -1,0 +1,85 @@
+/* Container for the main question section */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+  }
+  
+  .container h2 {
+    font-size: 1.75rem;
+    color: #2e7d32; /* Dark green title color */
+    margin-bottom: 10px;
+  }
+  
+  .container p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  /* Answers section */
+  h3 {
+    font-size: 1.5rem;
+    color: #4a4a4a;
+    margin-top: 30px;
+  }
+  
+  /* Each answer card */
+  .card {
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .card-body {
+    position: relative;
+  }
+  
+  /* Username styling */
+  .card-body p strong {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #2e7d32;
+  }
+  
+  /* Like button aligned to the right */
+  .btn-outline-primary {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-color: #2e7d32;
+    color: #2e7d32;
+    font-weight: bold;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #2e7d32;
+    color: #ffffff;
+    border-color: #2e7d32;
+  }
+  
+  /* Additional styling for the Like button when disabled */
+  .btn-outline-primary:disabled {
+    color: #8c8c8c;
+    border-color: #cccccc;
+  }
+  
+  .text-muted {
+    color: #888888;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  
+  /* Answer form styling */
+  .ans {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #dcdcdc;
+  }
+  

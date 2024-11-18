@@ -1,0 +1,39 @@
+<!-- src/app/signup/signup.component.html -->
+<div class="signup-container">
+    <h2>Signup</h2>
+    <form (ngSubmit)="onSignup()">
+      <div class="form-group">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" [(ngModel)]="firstName" name="firstName" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" [(ngModel)]="lastName" name="lastName" required />
+      </div>
+  
+      <label for="course">Select Course:</label>
+<select id="course" [(ngModel)]="selectedCourse" name="course" required>
+  <option value="" disabled>Select your course</option>
+  <option *ngFor="let course of courses" [value]="course">{{ course }}</option>
+</select>
+
+  
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required />
+      </div>
+  
+      <button type="submit">Sign Up</button>
+    </form>
+  
+    <div *ngIf="errorMessage" class="error-message">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div>
+  
